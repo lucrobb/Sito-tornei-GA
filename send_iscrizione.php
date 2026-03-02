@@ -20,17 +20,14 @@ $genere   = $_POST["genere"];
 $telefono = $_POST["telefono"];
 $email    = $_POST["email"];
 
-// DEBUG log (optional)
-error_log("DEBUG: torneo=$torneo, identity=$identity, nome=$nome, cognome=$cognome, genere=$genere, classe=$classe, telefono=$telefono");
 
-// Insert into database
 $stmt = $pdo->prepare("
     INSERT INTO iscrizioni (torneo, identity, nome, cognome, genere, classe, telefono)
     VALUES (?, ?, ?, ?, ?, ?, ?)
 ");
 $stmt->execute([$torneo, $identity, $nome, $cognome, $genere, $classe, $telefono]);
 
-// Send confirmation email (basic PHP mail)
+// Email di conferma
 $subject = "Conferma iscrizione - Tornei GA '26";
 
 if ($identity === "allievo") {
@@ -46,13 +43,7 @@ if ($identity === "allievo") {
              . "La ringraziamo per la sua iscrizione.\nCordiali saluti,\nGruppo tornei GA '26";
 }
 
-// Simple PHP mail (server must allow)
-error_log("EMAIL DEBUG: trying to send to $email");
-if (mail($email, $subject, $message, "From: your-email@gmail.com")) {
-    error_log("EMAIL DEBUG: mail() returned true");
-} else {
-    error_log("EMAIL DEBUG: mail() returned false");
-}
+
 mail($email, $subject, $message, "From: torneiGAlilu2@gmail.com");
 
 // Redirect to success page
