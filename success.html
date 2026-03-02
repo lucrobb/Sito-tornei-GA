@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Iscrizione completata</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body class="success">
+        <nav>
+            <div>
+                <a href="index.php" class="logo">Tornei GA '26</a>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a class="calcio" href="calcio.php">Calcio</a></li>
+                    <li><a class="scacchi" href="scacchi.php">Scacchi</a></li>
+                </ul>
+                <a href="iscrizione.php" class="iscrizione">Iscriviti</a>
+            </div>
+        </nav>
+        <img class="success" src="images/success_image.png" alt="successo">
+        <h2 id="conferma_titolo"></h2>
+        <p id="conferma_successo"></p>
+        <a class="success" href="{{url_for('index')}}">Torna alla pagina principale</a>
+    <script src="success.js"></script>
+    </body>
+
+</html>

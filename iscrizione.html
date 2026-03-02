@@ -1,0 +1,165 @@
+<!DOCTYPE html>  
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Iscrizioni</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <nav>
+            <div>
+                <a href="index.php" class="logo">Tornei GA '26</a>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a class="calcio" href="calcio.php">Calcio</a></li>
+                    <li><a class="scacchi" href="scacchi.php">Scacchi</a></li>
+                </ul>
+                <a href="iscrizione.php" class="iscrizione">Iscriviti</a>
+            </div>
+        </nav>
+
+        <form action="send_iscrizione.php" method="post" id="container_iscrizioni">
+
+            <section id="benvenuto" class="section active">
+                <h1>Iscrizioni</h1>
+                <p>Iscriviti qui a ciò che ti interessa, ti saranno fornite più tardi ulteriori informazioni riguardo alla tua partecipazione. Iscrivendoti, confermi di aver letto il documento con il regolamento del tuo torneo e accetti le condizioni proclamate. Grazie mille e divertiti! </p>
+                <button type="button" onclick="startIscrizione()">Inizia!</button>
+            </section>
+            
+            <section id="scelta_torneo" class="section">
+                <div class="pagina_iscrizione">
+                    <h2>Scegli il torneo a cui vorresti iscriverti:</h2>
+                    <label>
+                        <input type="radio" name="torneo" value="calcio" class="calcio_input" data-required>
+                        Calcio
+                    </label>
+                    <label>
+                        <input type="radio" name="torneo" value="scacchi" class="scacchi_input">
+                        Scacchi
+                    </label>
+                    <br>
+                    
+
+                </div>
+                <button class="iscrizione" type="button" onclick="goBack0()">Indietro</button>
+                <button class="iscrizione" type="button" onclick="goToIdentity()">Avanti</button>
+                
+                
+            </section>
+
+            <section id="identity_selection" class="section">
+                <div class="pagina_iscrizione">
+                    <h2>Sei un/una prof o un allievo/un'allieva?</h2>
+                    <label>
+                        <input type="radio" name="identity" value="prof" data-required>
+                        Prof
+                    </label>
+                    <label>
+                        <input type="radio" name="identity" value="allievo">
+                        Allievo/a
+                    </label>
+                    <br>
+                    
+                </div>
+                <button class="iscrizione" type="button" onclick="goBack1()">Indietro</button>
+                <button class="iscrizione" type="button" onclick="goToDati()">Avanti</button>
+                
+            </section>
+
+            <section id="allievi_iscrizione" class="section">
+                <div class="pagina_iscrizione">
+                    <h2>Come ti chiami?</h2>
+                    <label class="nomi">
+                        <input type="text" name="nome" placeholder="Nome" classe="nomi" data-required>
+                    </label>
+                    <label class="nomi">
+                        <input type="text" name="cognome" placeholder="Cognome" classe="nomi" data-required>
+                    </label>
+                    <h2>Genere</h2>
+                    <label>
+                        <input type="radio" name="genere" value="maschio" data-required>
+                        Maschio
+                    </label>
+                    <label>
+                        <input type="radio" name="genere" value="femmina">
+                        Femmina
+                    </label>
+                    <label>
+                        <input type="radio" name="genere" value="non binari*">
+                        Non binari*
+                    </label>
+                    <label>
+                        <input type="radio" name="genere" value="non specificato">
+                        Preferisco non specificarlo
+                    </label>
+                    <h2>Classe</h2>
+                    <label class="classe">
+                        <input type="text" name="classe" placeholder="1A" data-required>
+                    </label>
+                    <h2>E-mail</h2>
+                    <label class="e-mail">
+                        <input id="email" type="email" name="email" placeholder="ABC123@gmail.com" data-required>
+                    </label>
+                    <h2>Numero di telefono</h2>
+                    <p>Ti contatteremo tramite Whatsapp, quindi per favore fornisci il tuo numero di telefono:</p>
+                    <label classe="telefono">
+                        <input type="tel" name="telefono" placeholder="+41 12 345 67 89" data-required>
+                    </label>
+                    <br>
+                </div>
+                <button class="iscrizione" type="button" onclick="goBack2()">Indietro</button>
+                <button class="iscrizione" type="submit">Invia iscrizione</button>
+            
+
+            </section>
+
+            <section id="prof_iscrizione" class="section">
+                <div class="pagina_iscrizione">
+                    <h2>Come si chiama?</h2>
+                    <label class="nomi">
+                        <input type="text" name="prof_nome" data-required placeholder="Nome">
+                    </label>
+                    <label class="nomi">
+                        <input type="text" name="prof_cognome" data-required placeholder="Cognome" classe="nomi">
+                    </label>
+                    <h2>Genere</h2>
+                    <label>
+                        <input type="radio" name="genere" value="maschio" data-required>
+                        Maschio
+                    </label>
+                    <label>
+                        <input type="radio" name="genere" value="femmina">
+                        Femmina
+                    </label>
+                    <label>
+                        <input type="radio" name="genere" value="non binar*">
+                        Non binari*
+                    </label>
+                    <label>
+                        <input type="radio" name="genere" value="non specificato">
+                        Preferisco non specificarlo
+                    </label>
+                    <br>
+                    <h2>Classe (se è docente di classe, facoltativo)</h2>
+                    <label class="classe">
+                        <input type="text" name="prof_classe" placeholder="1A">
+                        
+                    </label>
+                    <h2>E-mail</h2>
+                    <label class="e-mail">
+                        <input id="email" type="email" name="email" placeholder="ABC123@gmail.com" data-required>
+                    </label>
+                    <br>
+
+                </div>
+                <button class="iscrizione" type="button" onclick="goBack3()">Indietro</button>
+                <button class="iscrizione" type="submit">Invia iscrizione</button>
+                
+            </section>
+
+        </form>
+
+    <script src="iscrizione.js"></script>
+    </body>
+</html>

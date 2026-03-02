@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+body {
+    background-color: #fcf9f2;
+    color: #2b2b2b;
+    font-family: "Comic Relief";
+    margin: 0;
+}
+
+h1{
+    text-align:left;
+    font-weight: 700;
+    font-size: 70px;
+    padding-top: 50px;
+    margin-left: 10px;
+    padding-bottom: 50px;
+   
+
+}
+
+h2{
+    text-align:left;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;  
+
+}
+h3{
+    font-weight: 600;
+    font-size: 24;
+    text-decoration: underline 2px;
+    margin-left: 20px;
+}
+
+
+
+p{
+    text-align:left;
+    font-weight: 400;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+button{
+    background-attachment: scroll;
+    background-color: #2b2b2b;
+    color:#fcf9f2;
+    border-style: hidden ;
+    border-radius: 15px; 
+    padding: 10px;
+    margin: 15px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+div.nav{
+    width: 100vw;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    font-weight: 400;
+    display: block;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #2b2b2b1a;
+    overflow-x: auto;
+    
+
+}
+nav div {
+    display: flex;
+    min-width: 600px; 
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+nav ul li a{
+    color: #2b2b2b;
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Comic Relief";
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.2s ease;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav ul li a.calcio::after{
+    background-color:#52db4d;
+}
+nav ul li a.pallavolo::after{
+    background-color:#fcb90f;
+}
+nav ul li a.scacchi::after{
+    background-color:#2b2b2b;
+}
+
+
+
+.logo{
+    font-family: "Barriecito";
+    font-size: 36px;
+    transition: transform 0.2s ease;
+    color: #2b2b2b;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right:0px;
+    text-decoration: none;
+}
+.logo:hover{
+    transform: scale(1.05) rotate(2deg);
+
+}
+a.iscrizione{
+    border-style: hidden;
+    padding: 10px;
+    border-radius: 15px;
+    background-color:#2b2b2b;
+    color:#fcf9f2; 
+    transition: all 0.2s ease; 
+    text-decoration: none;
+    margin: 10px;
+    margin-left: 0px;  
+}
+a.iscrizione::after{
+    content: ' ›';
+    margin-left: 5px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+}
+a.iscrizione:hover{
+    transform: translateX(2px);
+}
+a.iscrizione:hover::after{
+    opacity: 100%;
+    transform: translateX(0);
+}
+
+.index_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+div.div_image{
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+    align-items: center;
+
+}
+body.index div.div_image{
+    background-color: #ffffff;
+    border-radius: 15px;
+    max-width: 600px;
+    min-width: 0;
+    box-shadow: 2px 2px 4px oklch(80% 0 0);
+    padding: 20px;
+}
+
+div.div_image img{
+    max-width: 400px; 
+    max-height: 565px;
+    height: auto;
+    min-width: 200px;
+    flex-grow: 1;
+    box-shadow: 0 6px 20px rgba(43, 43, 43, 0.3);
+}
+div.div_image#calcio{
+    align-items: center;
+}
+div.div_image#calcio img{
+    max-width: 600px;
+}
+div.div_image#calcio div{
+    max-width: 600px;
+    min-width: 300px;
+}
+
+
+div.div_image div{
+    flex-shrink: 1;
+    flex-grow: 1;
+    min-width: 200px;
+    max-width: 700px;
+    margin-right: auto;
+}
+
+
+h2 a{
+    color:#2b2b2b;
+}
+
+h2 a::after{
+    content:'›';
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+h2 a:hover::after{
+    transform: translateX(5px);
+}
+h2 a.calcio{
+    text-decoration-color: #52db4d;
+}
+
+
+h2 a.pallavolo{
+    text-decoration-color:#fcb90f;
+}
+h2 a.scacchi{
+    text-decoration-color:#2b2b2b;
+}
+
+
+div.pagina_iscrizione{
+    padding: 30px;
+    padding-bottom: 100px;
+    border: 2px solid #adadad;
+    border-radius: 15px;
+    margin: 20px;
+    margin-top: 150px; 
+    min-height: 300px;
+    
+}
+
+button.iscrizione{
+    margin-top: 50px;
+}
+
+#container_iscrizioni{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+div.pagina_iscrizione h2{
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 0;
+
+}
+
+#allievi_iscrizione div.pagina_iscrizione{
+    margin-top: 100px;
+}
+
+.section{
+    opacity: 0;
+    transition: transform 0.35s ease-out;
+    transform: translateX(0px);
+    pointer-events: none;
+    position: absolute;
+}
+.section.active {
+  opacity: 1;                     
+  transform: translateX(0px);      
+  pointer-events: auto;           
+}
+.section.active.forward{
+    transform: translateX(-10px);
+}
+.section.active.back{                
+    transform: translateX(10px);          
+}
+body.success{
+    background-color: white;
+}
+img.success{
+    width: 100vw;
+    
+}
+
+
+
+label input[type="text"], label input[type="email"]{
+    font-family: "Comic Relief";
+    font-size: 16px;
+    border: 1px solid #adadad;
+    background-color:#fcf9f2;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+input[type="tel"]{
+    font-family: "Comic Relief";
+    font-size: 16px;
+    border-style: solid;
+    border-color:#adadad;
+    background-color:#fcf9f2;
+    border-radius: 10px;
+    border-width: 1px;
+    outline: none;
+    padding: 5px;
+    margin: 20px;
+}
+
+label.nomi input{
+    width: 100px;
+}
+
+
+label.classe input{
+    width: 40px;
+    text-align: center;
+}
+label.telefono input{
+    width: 150px;
+}
+label.e-mail input{
+    width: 200px;
+}
+
+input[type="radio"]{
+    border-style: solid;
+    border-width: 2px;
+    accent-color: grey;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 20px;
+}
+input[type="radio"].calcio_input{
+    accent-color: #52db4d;
+}
+input[type="radio"].pallavolo_input{
+    accent-color: #fcb90f;
+}
+input[type="radio"].scacchi_input{
+    accent-color: #2b2b2b;
+}
+
+body.admin table{
+    border-collapse: collapse;
+    border: 2px solid #2b2b2b;
+    margin: 20px;
+    width: calc(100vw - 40px) !important;
+    table-layout: fixed !important;
+    box-sizing: border-box;
+
+}
+
+table.colonne5 th, table.colonne5 td{
+    padding: 5px;
+    border: 2px solid #2b2b2b;
+    width: 20%
+}
+table.colonne4 th, table.colonne4 td{
+    padding: 5px;
+    border: 2px solid #2b2b2b;
+    width: 25%
+}
+table.colonne6 th, table.colonne6 td{
+    padding: 5px;
+    border: 2px solid #2b2b2b;
+    width: calc(100% / 6)
+}
+body.admin h2{
+    text-decoration: none;
+}
+
+section.hero {
+    min-height: 70vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+            rgba(82, 219, 77, 0.25) 0%,
+            rgba(252, 185, 15, 0.25) 50%,
+            #fcf9f2 100%);
+    padding: 4rem 5%;
+    margin: 0;
+}
+body.calcio section.hero, body.pallavolo section.hero, body.scacchi section.hero{
+    min-height: 30vh;
+    background: none;
+}
+
+div.hero_content {
+    max-width: 800px;
+    text-align: center;
+}
+.hero_h1, .hero_p{
+    text-align: center;
+}
+.hero_p{
+    margin-bottom: 50px;
+}
+
+.hero a{
+    color:#ffffff;
+    background-color: #2b2b2b;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 24px;
+    display: inline-block;
+    margin: 30px;
+    margin-top: 0;
+    transition: all 0.3s ease;
+}
+.hero a::after {
+    content: '›'; 
+    margin: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+.hero a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 43, 43, 0.3);
+    
+}
+
+.hero a:hover::after {
+    transform: translateX(5px); 
+    
+}
+.hero a.Instagram{
+    background-color: #fcf9f2;
+    color: #2b2b2b;
+    border: 2px solid transparent;
+    background-image: 
+        linear-gradient(#fcf9f2, #fcf9f2),
+        linear-gradient(135deg, #da0ac5 0%, #fcb90f 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+section.gradiente{
+    min-height: 50vh;
+    align-items: normal;
+    justify-content: center;
+}
+body.calcio section.gradiente{
+    background: linear-gradient(180deg, 
+            rgba(82, 219, 77, 0.25) 0%,
+            #fcf9f2 100%);
+}
+body.pallavolo section.gradiente{
+    background: linear-gradient(180deg,
+            rgba(252, 185, 15, 0.25) 0%,
+            #fcf9f2 100%);
+}
+body.scacchi section.gradiente{
+    background: linear-gradient(180deg,
+            rgb(117, 117, 117) 0%,
+            #fcf9f2 100%);
+}
+
+
+section.quick_info{
+    padding: 50px;
+}
+div.grid_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+div.grid_item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color:#ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(43, 43, 43, 0.1);
+    padding: 10px;
+
+}
+span.title{
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+section.info_principali{
+    padding: 30px;
+    background-color:#fcf9f2;
+}
+div.card_image{
+    display: flex;
+    max-width: 100vw;
+    gap: 30px;
+    align-items: flex-start;
+    align-items: top;
+}
+
+div.card{
+    padding: 20px;
+    padding-top: 10px;
+    margin-bottom: 100px;
+    box-shadow: 0 6px 20px rgba(43, 43, 43, 0.3);
+    background-color:#ffffff;
+    border-radius: 15px;
+}
+div.card_image img{
+    min-width: 0;
+    max-width: 500px;
+    height: auto;
+}
+div.card_image div{
+    flex: 0 0 30vw;
+}
+
+body.calcio h2{
+    text-decoration-color: #52db4d;
+}
+body.pallavolo h2{
+    text-decoration-color:#fcb90f;
+}
+body.scacchi h2{
+    text-decoration-color:#2b2b2b;
+}
+div.columns{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+body.calcio div.column_1{
+    border-right: solid 2px #52db4d;
+    width: 50%; 
+}
+body.pallavolo div.column_1{
+    border-right: solid 2px #fcb90f;
+    width: 50%; 
+}
+body.scacchi div.column_1{
+    border-right: solid 2px #2b2b2b;
+    width: 50%; 
+}
+
+div.ore{
+    min-width: 150px;
+    margin-right: 20px;
+    
+}
+
+body.calcio div.ore ul li::marker{
+    color:#52db4d;
+
+}
+body.pallavolo div.ore ul li::marker{
+    color:#fcb90f;
+
+}
+body.scacchi div.ore ul li::marker{
+    color:#2b2b2b;
+
+}
+div.info_ore ul{
+    list-style: none;
+    min-width: 350px;
+}
+body.success{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+a.success{
+    background-color:#2b2b2b;
+    color:#fcf9f2;
+    border-radius: 15px; 
+    padding: 10px;
+    margin: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+#conferma_titolo{
+    text-decoration: none;    
+}
+.hero a.pdf{
+    background-color: transparent;
+    text-decoration: 2px solid #2b2b2b underline;
+    color:#2b2b2b;
+    transition: none; 
+}
+.hero a.pdf::after {
+    content: ''; 
+}
+.hero a.pdf:hover {
+    transform: none;
+    box-shadow: none;
+    
+}
+
+.hero a.pdf:hover::after {
+    transform: none;
+    
+}
+#pdf_calcio:hover{
+    color:#52db4d;
+    text-decoration-color: #52db4d;
+}
+#pdf_pallavolo:hover{
+    color:#fcb90f;
+    text-decoration-color:#fcb90f;
+}
+#programma_temporaneo{
+    border: 2px dashed #2b2b2b;
+    padding: 10px;
+    border-radius: 5px;
+}

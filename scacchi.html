@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta harset="UTF-8">
+        <title>Sito web</title>
+        <link rel = "stylesheet" href="index.css">
+    </head>
+    <body class="scacchi">
+        <nav>
+            <div>
+                <a href="index.php" class="logo">Tornei GA '26</a>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a class="calcio" href="calcio.php">Calcio</a></li>
+                    <li><a class="scacchi" href="scacchi.php">Scacchi</a></li>
+                </ul>
+                <a href="iscrizione.php" class="iscrizione">Iscriviti</a>
+            </div>
+        </nav>
+        <div id="container_scacchi">
+            <section class="gradiente">
+                <section class="hero">
+                    <div class="hero_content">
+                        <h1 class="hero_h1">Torneo di scacchi! </h1>
+                        <a href="{{url_for('iscrizione')}}" class="hero_iscrizione">Iscriviti</a>
+                    </div>
+                </section>
+                <section class="quick_info">
+                    <div class="grid_container">
+                        <div class="grid_item">
+                            <span class="title">Quando?</span>
+                            <span class="content">23-25 marzo a pranzo</span>              
+                        </div>
+                        <div class="grid_item">
+                            <span class="title">Dove?</span>
+                            <span class="content">Biblioteca</span>              
+                        </div>
+                        
+
+
+
+                    </div>
+
+                </section>
+            </section>
+            <section class="info_principali">
+                <div class="card">
+                    <h2 class="card_h2">Il nostro torneo</h2>
+                    <p> Come gli altri anni, durante le GA, verrà proposto il torneo di scacchi del LiLu2. 
+                        Il torneo si svolgerà nelle pause pranzo delle tre giornate dalle 12:30 alle 14:00, in biblioteca (arrivate già pranzati). 
+                        Per questioni logistiche, il numero è chiuso a 32 persone: affrettatevi ad iscrivervi! 
+                    </p>
+                </div>
+
+                <div>
+                    <h2>Regolamento</h2>
+                    <p>Si applicano le regole della federazione internazionale degli scacchi (regolamento FIDE).</p>
+                </div>
+                
+                
+                <h2>Struttura</h2>
+                <div class="card">
+                    <div class="columns">
+                        <div class="column_1">
+                            <h3>Qualifiche</h3>
+                            <ul>
+                                <li>Primo giorno</li>
+                                <li>Qualificazione diretta: vincere due partite su tre</li>
+                            </ul>
+                        </div>
+                        <div class="column_2">
+                            <h3>Eliminazione diretta</h3>
+                            <ul>
+                                <li>Eliminazione di chi perde fino ad arrivare a un/una vincitore/vincitrice!</li>
+                            </ul>
+                                
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                    
+                        
+            </section>
+        </div>
+    <script src="{{url_for('static', filename='scacchi.js')}}"></script>
+    </body>
+</html>
+
+
+
