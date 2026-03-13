@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = urlParams.get('email');
         
         if (email) {
-            conferma.textContent = `La tua iscrizione è stata completata con successo, la conferma ufficiale sarà mandata per email al seguente indirizzo: ${email}`;
+            conferma.textContent = `La tua iscrizione è stata completata con successo!`;
         }
     }
     const titolo = document.getElementById("conferma_titolo");
