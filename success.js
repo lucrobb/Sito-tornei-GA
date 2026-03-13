@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = urlParams.get('email');
         
         if (email) {
-            conferma.textContent = `La tua iscrizione è stata completata con successo!`;
+            conferma.textContent = `La tua iscrizione è stata completata con successo, la conferma ufficiale sarà mandata per email al seguente indirizzo: ${email}. 
+            La partecipazione al torneo sarà confermata più tardi, non è decisa in questo momento.`;
         }
     }
     const titolo = document.getElementById("conferma_titolo");
